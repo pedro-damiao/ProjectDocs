@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="documentation-theme-jekyll" href="http://localhost:4000/feed.xml">
 
 
 
@@ -861,8 +861,8 @@ prince <span class="nt">--javascript</span> <span class="nt">--input-list</span>
       <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
     <span class="na">values</span><span class="pi">:</span>
       <span class="na">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">page_print"</span>
-      <span class="na">comments</span><span class="pi">:</span> <span class="kc">true</span>
-      <span class="na">search</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">comments</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">search</span><span class="pi">:</span> <span class="no">true</span>
 
 <span class="na">pdf_sidebar</span><span class="pi">:</span> <span class="s">mydoc_sidebar</span>
 </code></pre></div></div>
@@ -975,7 +975,7 @@ prince <span class="nt">--javascript</span> <span class="nt">--input-list</span>
 
 <p>The default_print.html layout will change the class of the <code class="language-plaintext highlighter-rouge">body</code> element based on the type value in the page’s frontmatter:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body class="<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"title"</span><span class="cp">%}</span>title<span class="cp">{%</span><span class="w"> </span><span class="nt">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"frontmatter"</span><span class="w"> </span><span class="cp">%}</span>frontmatter<span class="cp">{%</span><span class="w"> </span><span class="nt">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"first_page"</span><span class="w"> </span><span class="cp">%}</span>first_page<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span> print"&gt;
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body class="<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"title"</span><span class="p">%}</span>title<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"frontmatter"</span><span class="w"> </span><span class="p">%}</span>frontmatter<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"first_page"</span><span class="w"> </span><span class="p">%}</span>first_page<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span> print"&gt;
 </code></pre></div></div>
 
 <p>Now in the css/printstyles.css file, you can assign a page name based on a specific class:</p>
@@ -1059,13 +1059,13 @@ prince <span class="nt">--javascript</span> <span class="nt">--input-list</span>
 <p>You’ll see some other items in there such as <code class="language-plaintext highlighter-rouge">prince-script</code>. This means we’re using JavaScript to run some functions to dynamically generate that content. These JavaScript functions are located in the _includes/head_print.html:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-    <span class="nx">Prince</span><span class="p">.</span><span class="nf">addScriptFunc</span><span class="p">(</span><span class="dl">"</span><span class="s2">datestamp</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Prince</span><span class="p">.</span><span class="nx">addScriptFunc</span><span class="p">(</span><span class="dl">"</span><span class="s2">datestamp</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="dl">"</span><span class="s2">PDF last generated: March 04, 2024</span><span class="dl">"</span><span class="p">;</span>
     <span class="p">});</span>
 <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span>
 <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-    <span class="nx">Prince</span><span class="p">.</span><span class="nf">addScriptFunc</span><span class="p">(</span><span class="dl">"</span><span class="s2">guideName</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Prince</span><span class="p">.</span><span class="nx">addScriptFunc</span><span class="p">(</span><span class="dl">"</span><span class="s2">guideName</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="dl">"</span><span class="s2"> User Guide</span><span class="dl">"</span><span class="p">;</span>
     <span class="p">});</span>
 <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
@@ -1073,12 +1073,12 @@ prince <span class="nt">--javascript</span> <span class="nt">--input-list</span>
 
 <p>There are a couple of Prince functions that are default functions from Prince. This gets the heading title of the page:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nx">content</span><span class="p">:</span> <span class="nf">string</span><span class="p">(</span><span class="nx">doctitle</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nx">content</span><span class="p">:</span> <span class="nx">string</span><span class="p">(</span><span class="nx">doctitle</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>This gets the current page:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nx">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Page </span><span class="dl">"</span> <span class="nf">counter</span><span class="p">(</span><span class="nx">page</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nx">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Page </span><span class="dl">"</span> <span class="nx">counter</span><span class="p">(</span><span class="nx">page</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>Because the theme uses JavaScript in the CSS, you have to add the <code class="language-plaintext highlighter-rouge">--javascript</code> tag in the Prince command (detailed later on this page).</p>

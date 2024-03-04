@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="documentation-theme-jekyll" href="http://localhost:4000/feed.xml">
 
 
 
@@ -821,8 +821,8 @@ $('#toc').on('click', 'a', function() {
 
 <p>For example, the sidebar.html file contains the following code:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">external_url</span><span class="w"> </span><span class="cp">%}</span>
-    &lt;li&gt;&lt;a href="<span class="cp">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">external_url</span><span class="cp">}}</span>" target="_blank" rel="noopener"&gt;<span class="cp">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">title</span><span class="cp">}}</span>&lt;/a&gt;&lt;/li&gt;
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">external_url</span><span class="w"> </span><span class="p">%}</span>
+    &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">external_url</span><span class="p">}}</span>" target="_blank" rel="noopener"&gt;<span class="p">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
 </code></pre></div></div>
 
 <p>You can see that the <code class="language-plaintext highlighter-rouge">external_url</code> is a condition that applies a different formatting. Although this feature is available, I recommend putting any external navigation links in the top navigation bar instead of the side navigation bar.</p>
@@ -833,8 +833,8 @@ $('#toc').on('click', 'a', function() {
 
 <p>For example, the sidebar.html file contains the following code:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="cp">%}</span>
-   &lt;li class="active"&gt;&lt;a href="<span class="cp">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="cp">}}</span>"&gt;<span class="cp">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">title</span><span class="cp">}}</span>&lt;/a&gt;&lt;/li&gt;
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">%}</span>
+   &lt;li class="active"&gt;&lt;a href="<span class="p">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">folderitem</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
 </code></pre></div></div>
 
 <p>If the <code class="language-plaintext highlighter-rouge">page.url</code> matches the <code class="language-plaintext highlighter-rouge">subfolderitem.url</code>, then an <code class="language-plaintext highlighter-rouge">active</code> class gets applied. If not, the <code class="language-plaintext highlighter-rouge">active</code> class does not get applied.</p>

@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="documentation-theme-jekyll" href="http://localhost:4000/feed.xml">
 
 
 
@@ -809,11 +809,11 @@ $('#toc').on('click', 'a', function() {
 
 <p>On a page in my site (it can be HTML or markdown), you can conditionalize content using the following:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">platform</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"mac"</span><span class="w"> </span><span class="cp">%}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">platform</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"mac"</span><span class="w"> </span><span class="p">%}</span>
 Here's some info about the Mac.
-<span class="cp">{%</span><span class="w"> </span><span class="nt">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">platform</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"windows"</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">platform</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"windows"</span><span class="w"> </span><span class="p">%}</span>
 Here's some info about Windows ...
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
 <p>This uses simple <code class="language-plaintext highlighter-rouge">if-elsif</code> logic to determine what is shown (note the spelling of <code class="language-plaintext highlighter-rouge">elsif</code>). The <code class="language-plaintext highlighter-rouge">else</code> statement handles all other conditions not handled by the <code class="language-plaintext highlighter-rouge">if</code> statements.</p>
@@ -823,11 +823,11 @@ Here's some info about Windows ...
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To bake a casserole:
 
 1. Gather the ingredients.
-<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"writer"</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"writer"</span><span class="w"> </span><span class="p">%}</span>
 2. Add in a pound of meat.
-<span class="cp">{%</span><span class="w"> </span><span class="nt">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"designer"</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"designer"</span><span class="w"> </span><span class="p">%}</span>
 3. Add in an extra can of beans.
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 3. Bake in oven for 45 min.
 </code></pre></div></div>
 
@@ -839,16 +839,16 @@ Here's some info about Windows ...
 
 <p>For example, here’s an example using <code class="language-plaintext highlighter-rouge">or</code>:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s2">"vegan"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"vegetarian"</span><span class="w"> </span><span class="cp">%}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s2">"vegan"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"vegetarian"</span><span class="w"> </span><span class="p">%}</span>
     Then run this...
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
 <p>Note that you have to specify the full condition each time. You can’t shorten the above logic to the following:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s2">"vegan"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s2">"vegetarian"</span><span class="w"> </span><span class="cp">%}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s2">"vegan"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s2">"vegetarian"</span><span class="w"> </span><span class="p">%}</span>
     // run this.
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
 <p>This won’t work.</p>
@@ -857,9 +857,9 @@ Here's some info about Windows ...
 
 <p>You can also use <code class="language-plaintext highlighter-rouge">unless</code> in your logic, like this:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">unless</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"pdf"</span><span class="w"> </span><span class="cp">%}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"pdf"</span><span class="w"> </span><span class="p">%}</span>
 ...do this
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endunless</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
 <p>When figuring out this logic, read it like this: “Run the code here <em>unless</em> this condition is satisfied.”.”</p>
@@ -870,13 +870,13 @@ Here's some info about Windows ...
 
 <p>Here’s an example of using conditional logic based on a value in a data file:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">options</span><span class="p">.</span><span class="nv">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"alpha"</span><span class="w"> </span><span class="cp">%}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">options</span><span class="p">.</span><span class="nv">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"alpha"</span><span class="w"> </span><span class="p">%}</span>
 show this content...
-<span class="cp">{%</span><span class="w"> </span><span class="nt">elsif</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">options</span><span class="p">.</span><span class="nv">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"beta"</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">options</span><span class="p">.</span><span class="nv">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"beta"</span><span class="w"> </span><span class="p">%}</span>
 show this content...
-<span class="cp">{%</span><span class="w"> </span><span class="nt">else</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
 this shows if neither of the above two if conditions are met.
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
 <p>To use this, I would need to have a _data folder called options where the <code class="language-plaintext highlighter-rouge">output</code> property is stored.</p>
