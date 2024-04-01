@@ -19,6 +19,7 @@ entries:
       output: pdf
       type: frontmatter
 
+
   - title: Overview
     output: web, pdf
     folderitems:
@@ -294,4 +295,69 @@ entries:
           url: /tag_troubleshooting.html
           output: web
 
+  - title: Radio Controlled Car
+    output: web, pdf
+    folderitems:
+    
+    - title: Introduction
+      url: /rc_car_Introduction.html
+      output: web
+
+      subfolders:
+      - title: Hardware
+        output: web
+        subfolderitems:
+        - title: Introduction
+          url: /rc_car_Hardware_Introduction.html
+          output: web
+        - title: Development board
+          url: /rc_car_Hardware_Development_board.html
+          output: web
+        - title: Chassis
+          url: /rc_car_Hardware_Chassis.html
+          output: web
+        - title: Motor
+          url: /rc_car_Hardware_Motor.html
+          output: web  
+        - title: Motor controller
+          url: /rc_car_Hardware_Motor_controller.html
+          output: web
+        - title: Servo
+          url: /rc_car_Hardware_Servo.html
+          output: web
+        - title: Radio transceiver
+          url: /rc_car_Hardware_Radio_transceiver.html
+          output: web
+      
+      - title: Software
+        output: web
+        subfolderitems:
+        - title: Introduction
+          url: /rc_car_Software_Introduction.html
+          output: web
+        - title: Development environment
+          url: /rc_car_Software_Development_environment.html
+          output: web
+      
+  - title: Development tools
+    output: web
+    folderitems:
+    - title: Laboratory
+      url: 
+      output: web
+    - title: Development Stack
+      url: 
+      output: web
+
+  - title: Art Engagement
+    output: web
+    folderitems:
+    - title: Courses
+      url: 
+      output: web
+    - title: Digital art
+      url: 
+      output: web
+  
+  - title: Ideas
 # Copyright 2021 Google LLC
